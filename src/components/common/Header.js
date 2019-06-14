@@ -3,7 +3,10 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light py-3 bg-light">
+    <nav
+      className="navbar navbar-expand-lg navbar-light py-3 bg-light"
+      style={styles.root}
+    >
       <button
         className="navbar-toggler"
         type="button"
