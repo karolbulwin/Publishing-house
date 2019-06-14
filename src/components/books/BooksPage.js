@@ -34,6 +34,7 @@ const BooksPage = ({ books, authors, loading, actions }) => {
         } else {
           setFilteredBooks(books);
           setIsLoading(false);
+          filterBooks();
         }
 
         if (authors.length === 0) {
