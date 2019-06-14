@@ -46,7 +46,7 @@ const BooksPage = ({ books, authors, loading, actions }) => {
       };
       fetchData();
     }
-  }, [books, authors]);
+  }, [books, authors, filterOpt]);
 
   function handleDeleteBook(book) {
     toast.success("Book deleted");
