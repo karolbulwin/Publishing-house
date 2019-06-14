@@ -1,7 +1,3 @@
-const root = {
-  boxShadow: "1px 3px 3px 1px #00000033"
-};
-
 const navLink = {
   transitionDuration: "200ms",
   ":hover": {
@@ -16,7 +12,6 @@ const activeStyle = {
 };
 
 export default {
-  root,
   navLink,
   activeStyle
 };
