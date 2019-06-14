@@ -13,10 +13,11 @@ import AuthorCounter from "./authors/AuthorCounter";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import styles from "./App-styles";
 
 function App() {
   return (
-    <>
+    <div style={styles}>
       <Header />
       <BooksCounter />
       <br />
@@ -33,7 +34,7 @@ function App() {
         <Route component={PageNotFound} />
       </Switch>
       <ToastContainer autoClose={3000} hideProgressBar />
-    </>
+    </div>
   );
 }
 
