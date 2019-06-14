@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const AuthorList = ({ authors, onDeleteClick, onAddClick }) => (
   <div className="table-responsive">
-    <table className="table table-striped">
+    <table className="table">
       <thead>
         <tr>
           <th scope="col" />
