@@ -1,24 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import AddButton from "../common/AddButton";
 import icon from "./goodreads_icon_16x16-fc141070fc3ea1a7cd145a4af570ec14.png";
 
 const BookList = ({ books, onDeleteClick, onAddClick }) => (
   <div className="table-responsive">
-    <table className="table table-striped">
-      <thead>
+    <table className="table">
+      <thead className="">
         <tr>
           <th scope="col" />
           <th scope="col">Title</th>
           <th scope="col">Author</th>
           <th scope="col">Category</th>
           <th scope="col" className="text-right">
-            <button
-              className="btn btn-outline-success add-author btn-sm"
-              onClick={() => onAddClick()}
-            >
-              Add Book
-            </button>
+            <AddButton onAddClick={onAddClick} text="Add Book" />
           </th>
         </tr>
       </thead>
