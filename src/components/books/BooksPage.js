@@ -52,18 +52,16 @@ const BooksPage = ({ books, authors, loading, actions }) => {
     toast.success("Book deleted");
     try {
       actions.deleteBook(book);
-      setFilteredBooks(filteredBooks.filter(b => book !== b));
+      const books = filteredBooks.filter(b => book !== b);
 
-      if (filteredBooks.length === 0) {
+      setFilteredBooks(books);
+      if (books.length === 0) {
         setFilterOpt({
-          authorId: filterOpt.authorId ? filterOpt.authorId : "",
-          category:
-            [...new Set(books.map(book => book.category))].filter(c => {
-              return c === filterOpt.category;
-            }).length > 0
-              ? filterOpt.category
-              : ""
+          authorId: "",
+          category: ""
         });
+        document.getElementById("authorId").value = "";
+        document.getElementById("category").value = "";
       }
       filterBooks();
     } catch (error) {
