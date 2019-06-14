@@ -3,19 +3,14 @@ import Radium from "radium";
 import React from "react";
 import styles from "./SubmitButton-styles";
 
-const SubmitButton = ({ text, type }) => (
-  <button style={styles.subBtn} type={type} className="btn btn-outline-success">
+const SubmitButton = ({ text }) => (
+  <button style={styles.subBtn} className="btn btn-outline-success">
     {text}
   </button>
 );
 
 SubmitButton.propTypes = {
-  text: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired
-};
-
-SubmitButton.defaultTypes = {
-  type: "submit"
+  text: PropTypes.string.isRequired
 };
 
 export default Radium(SubmitButton);
