@@ -23,7 +23,11 @@ const BookList = ({ books, onDeleteClick, onAddClick }) => (
           return (
             <tr key={book.id}>
               <td className="text-center">
-                <a className="" href={book.url}>
+                <a
+                  className=""
+                  href={book.url}
+                  aria-label={`Read more about ${book.title} on Goodreads`}
+                >
                   <img src={icon} alt="" />
                 </a>
               </td>
