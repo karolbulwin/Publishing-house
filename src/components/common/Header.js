@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import styles from "./Header-styles";
+import NavigationLink from "./NavigationLink";
 
 const Header = () => {
   return (
@@ -20,35 +21,10 @@ const Header = () => {
       </button>
       <div className="collapse navbar-collapse" id="navbarText">
         <ul className="navbar-nav mr-auto flex-grow-1 justify-content-lg-around">
-          <li className="nav-item">
-            <NavLink
-              className="nav-link"
-              to="/"
-              activeStyle={activeStyle}
-              exact
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/books" activeStyle={activeStyle}>
-              Books
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              className="nav-link"
-              to="/authors"
-              activeStyle={activeStyle}
-            >
-              Authors
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/about" activeStyle={activeStyle}>
-              About
-            </NavLink>
-          </li>
+          <NavigationLink to="/" text="Home" />
+          <NavigationLink to="/books" text="Books" />
+          <NavigationLink to="/authors" text="Authors" />
+          <NavigationLink to="/about" text="About" />
         </ul>
       </div>
     </nav>
