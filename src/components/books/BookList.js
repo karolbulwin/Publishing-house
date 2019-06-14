@@ -32,7 +32,9 @@ const BookList = ({ books, onDeleteClick, onAddClick }) => (
                 </a>
               </td>
               <td>
-                <Link to={"/book/" + book.slug}>{book.title}</Link>
+                <Link to={"/book/" + book.slug} style={{ color: "#002b59" }}>
+                  {book.title}
+                </Link>
               </td>
               <td>{book.authorName}</td>
               <td>{book.category}</td>
