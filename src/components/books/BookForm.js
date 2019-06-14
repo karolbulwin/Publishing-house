@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import TextInput from "../common/TextInput";
 import SelectInput from "../common/SelectInput";
+import styles from "../common/BgText-styles";
 
 const BookForm = ({
   book,
@@ -12,7 +13,7 @@ const BookForm = ({
   errors = {}
 }) => {
   return (
-    <div className="container py-4">
+    <div className="container py-4" style={styles}>
       <form onSubmit={onSave}>
         <h1 className="py-3">{book.id ? "Edit" : "Add"} Book</h1>
         {errors.onSave && (

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import TextInput from "../common/TextInput";
+import styles from "../common/BgText-styles";
 
 const AuthorForm = ({
   author,
@@ -10,7 +11,7 @@ const AuthorForm = ({
   errors = {}
 }) => {
   return (
-    <div className="container py-4">
+    <div className="container py-4" style={styles}>
       <form onSubmit={onSave}>
         <h1 className="py-3">{author.id ? "Edit" : "Add"} Author</h1>
         {errors.onSave && (

@@ -8,6 +8,7 @@ import AuthorList from "./AuthorList";
 import { Redirect } from "react-router-dom";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
+import styles from "../common/BgText-styles";
 
 class AuthorsPage extends React.Component {
   state = {
@@ -66,7 +67,7 @@ class AuthorsPage extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container" style={styles}>
         {this.state.redirectToAddAuthorPage && <Redirect to="/author" />}
         <div className="row">
           <div className="col text-center py-4">

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../common/BgText-styles";
 
 const HomePage = () => (
   <>
@@ -6,7 +7,7 @@ const HomePage = () => (
       className="container d-flex justify-content-center align-items-center"
       style={{ height: "80vh" }}
     >
-      <div className="jumbotron" style={{ background: "rgba(0, 0,0, .03)" }}>
+      <div className="jumbotron" style={styles}>
         <hr className="my-4" />
         <h1 className="text-center display-4">Publishing house</h1>
         <hr className="my-4" />

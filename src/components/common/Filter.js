@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SelectInput from "./SelectInput";
+import SubmitButton from "./SubmitButton";
 
 const Filter = ({ books, authors, onSave, onChange, errors = {} }) => {
   return (
@@ -17,7 +18,10 @@ const Filter = ({ books, authors, onSave, onChange, errors = {} }) => {
       </button>
 
       <div className="collapse" id="collapseExample">
-        <div className="card card-body">
+        <div
+          className="card card-body"
+          style={{ backgroundColor: "#f0f8ffab" }}
+        >
           <form onSubmit={onSave}>
             <div className="form-row">
               {errors.onSave && (
@@ -56,9 +60,10 @@ const Filter = ({ books, authors, onSave, onChange, errors = {} }) => {
                 />
               </div>
               <div className="col-md-1">
-                <button type="submit" className="btn btn-outline-success">
+                {/* <button type="submit" className="btn btn-outline-success">
                   Filter
-                </button>
+                </button> */}
+                <SubmitButton text="Filter" />
               </div>
             </div>
           </form>
