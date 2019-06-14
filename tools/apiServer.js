@@ -12,7 +12,7 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 
 // Simulate delay on all requests
-server.use(pause(200));
+server.use(pause(500));
 
 // Add createdAt to all POSTS
 server.use((req, res, next) => {
