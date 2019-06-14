@@ -25,7 +25,12 @@ const AuthorList = ({ authors, onDeleteClick, onAddClick }) => (
             <tr key={author.id}>
               <td />
               <td>
-                <Link to={"/author/" + author.slug}>{author.name}</Link>
+                <Link
+                  to={"/author/" + author.slug}
+                  style={{ color: "#002b59" }}
+                >
+                  {author.name}
+                </Link>
               </td>
               <td className="text-right">
                 <button
