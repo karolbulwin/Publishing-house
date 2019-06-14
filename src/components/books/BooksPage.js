@@ -9,6 +9,7 @@ import { Redirect } from "react-router-dom";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
 import Filter from "../common/Filter";
+import styles from "../common/BgText-styles";
 
 const BooksPage = ({ books, authors, loading, actions }) => {
   const [redirectToAddBookPage, setRedirectToAddBookPage] = useState(false);
@@ -117,7 +118,7 @@ const BooksPage = ({ books, authors, loading, actions }) => {
   }
 
   return (
-    <div className="container">
+    <div className="container" style={styles}>
       {redirectToAddBookPage && <Redirect to="/book" />}
       <div className="row">
         <div className="col text-center py-4">
