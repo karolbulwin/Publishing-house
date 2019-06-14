@@ -14,25 +14,35 @@ const BooksPage = ({ books, authors, loading, actions }) => {
   const [redirectToAddBookPage, setRedirectToAddBookPage] = useState(false);
   const [filterOpt, setFilterOpt] = useState({ authorId: "", category: "" });
   const [filteredBooks, setFilteredBooks] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    if (books.length === 0) {
-      actions
-        .loadBooks()
-        .then(() => {
+    if (!isLoading) {
+      setIsLoading(true);
+      const fetchData = async () => {
+        if (books.length === 0) {
+          await actions
+            .loadBooks()
+            .then(() => {
+              setFilteredBooks(books);
+            })
+            .catch(error => {
+              alert("Loading books failed" + error);
+            });
+          setIsLoading(false);
+        } else {
           setFilteredBooks(books);
-        })
-        .catch(error => {
-          alert("Loading books failed" + error);
-        });
-    } else {
-      setFilteredBooks(books);
-    }
+          setIsLoading(false);
+        }
 
-    if (authors.length === 0) {
-      actions.loadAuthors().catch(error => {
-        alert("Loading authors failed" + error);
-      });
+        if (authors.length === 0) {
+          await actions.loadAuthors().catch(error => {
+            alert("Loading authors failed" + error);
+          });
+          setIsLoading(false);
+        }
+      };
+      fetchData();
     }
   }, [books, authors]);
 
