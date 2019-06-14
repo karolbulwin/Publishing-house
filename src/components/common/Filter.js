@@ -59,12 +59,7 @@ const Filter = ({ books, authors, onSave, onChange, errors = {} }) => {
                   error={errors.author}
                 />
               </div>
-              <div className="col-md-1">
-                {/* <button type="submit" className="btn btn-outline-success">
-                  Filter
-                </button> */}
-                <SubmitButton text="Filter" />
-              </div>
+              <div className="col-md-1" />
             </div>
           </form>
         </div>
