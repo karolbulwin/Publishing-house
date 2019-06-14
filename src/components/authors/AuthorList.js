@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import AddButton from "../common/AddButton";
 
 const AuthorList = ({ authors, onDeleteClick, onAddClick }) => (
   <div className="table-responsive">
@@ -10,12 +11,7 @@ const AuthorList = ({ authors, onDeleteClick, onAddClick }) => (
           <th scope="col" />
           <th scope="col">Author Name</th>
           <th scope="col" className="text-right">
-            <button
-              className="btn btn-outline-success add-author btn-sm"
-              onClick={() => onAddClick()}
-            >
-              Add Author
-            </button>
+            <AddButton onAddClick={onAddClick} text="Add Author" />
           </th>
         </tr>
       </thead>
