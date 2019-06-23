@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SelectInput from "./SelectInput";
-import SubmitButton from "./SubmitButton";
 
 const Filter = ({ books, authors, onSave, onChange, errors = {} }) => {
   return (
