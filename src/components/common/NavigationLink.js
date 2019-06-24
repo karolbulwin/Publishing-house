@@ -5,12 +5,18 @@ import { NavLink } from "react-router-dom";
 import styles from "./NavigationLink-styles";
 
 const NavigationLink = ({ to, text }) => {
+  function handleClick() {
+    /*eslint-disable-next-line  */
+    $("#navbarText").collapse("hide");
+  }
+
   return (
     <li className="nav-item" style={styles.navLink}>
       <NavLink
         className="nav-link"
         to={to}
         activeStyle={styles.activeStyle}
+        onClick={handleClick}
         exact
       >
         {text}
