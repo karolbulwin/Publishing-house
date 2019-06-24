@@ -1,4 +1,4 @@
-import img from "../narrative-794978_1920.jpg";
+import img from "../img/narrative-794978_1920.jpg";
 
 const bgImg = {
   minHeight: "100%",
