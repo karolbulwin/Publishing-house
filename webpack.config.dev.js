@@ -15,6 +15,9 @@ module.exports = {
     filename: "bundle.js"
   },
   devServer: {
+    open: true,
+    port: 3000,
+    host: "192.168.1.100",
     stats: "minimal",
     overlay: true,
     historyApiFallback: true,
@@ -24,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env.API_URL": JSON.stringify("http://localhost:3001")
+      "process.env.API_URL": JSON.stringify("http://192.168.1.100:3001")
     }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
